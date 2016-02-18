@@ -40,26 +40,6 @@
       <p>&copy; 2016 photo<span>SEARCH</span></p>
     </footer>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="js/site.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('#gallery').lightGallery({
-          pager: true,
-          mode: 'lg-fade',
-          cssEasing : 'cubic-bezier(0.25, 0, 0.25, 1)'
-        });
-        //Search function
-        $("#search").keypress(function(){
-          var current_query = $(this).val();
-          $("#gallery li").hide();
-          $("#gallery li").each(function(){
-            var current_keyword = $(this).attr("data-sub-html")
-            if(current_keyword.indexOf(current_query) >= 0){
-              $(this).show();
-            }
-          }); 
-        });
-      });
-    </script> 
+    <script src="js/site.min.js"></script> 
   </body>
 </html>
