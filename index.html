@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Treehouse Interactive Photo Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700,500' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <header class="cf">
+      <div class="wrapper">
+        <div class="title">photo<span>SEARCH</span></div>
+        <form action="#" method="POST">
+          <input id="search" type="text" name="search" placeholder="Search...">
+        </form>
+      </div>
+    </header>
+    <main>
+      <div class="wrapper wrapper-gallery">
+        <ul id="gallery">
+          <li data-src="assets/01.jpg" data-sub-html="<p>I love hay bales. Took this snap on a drive through the countryside past some straw fields.</p>"><img src="assets/thumbs/01.jpg" alt="Hay Bales" /></li
+          ><li data-src="assets/02.jpg" data-sub-html="<p>The lake was so calm today. We had a great view of the snow on the mountains from here.</p>"><img src="assets/thumbs/02.jpg" alt="Lake" /></li
+          ><li data-src="assets/03.jpg" data-sub-html="<p>I hiked to the top of the mountain and got this picture of the canyon and trees below.</p>"><img src="assets/thumbs/03.jpg" alt="Canyon" /></li
+          ><li data-src="assets/04.jpg" data-sub-html="<p>It was amazing to see an iceberg up close, it was so cold but didn’t snow today.</p>"><img src="assets/thumbs/04.jpg" alt="Iceberg" /></li
+          ><li data-src="assets/05.jpg" data-sub-html="<p>The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.</p>"><img src="assets/thumbs/05.jpg" alt="Desert" /></li
+          ><li data-src="assets/06.jpg" data-sub-html="<p>Fall is coming, I love when the leaves on the trees start to change color.</p>"><img src="assets/thumbs/06.jpg" alt="Fall" /></li
+          ><li data-src="assets/07.jpg" data-sub-html="<p>I drove past this plantation yesterday, everything is so green!</p>"><img src="assets/thumbs/07.jpg" alt="Plantation" /></li
+          ><li data-src="assets/08.jpg" data-sub-html="<p>My summer vacation to the Oregon Coast. I love the sandy dunes!</p>"><img src="assets/thumbs/08.jpg" alt="Dunes" /></li
+          ><li data-src="assets/09.jpg" data-sub-html="<p>We enjoyed a quiet stroll down this countryside lane.</p>"><img src="assets/thumbs/09.jpg" alt="Countryside Lane" /></li
+          ><li data-src="assets/10.jpg" data-sub-html="<p>Sunset at the coast! The sky turned a lovely shade of orange.</p>"><img src="assets/thumbs/10.jpg" alt="Sunset" /></li
+          ><li data-src="assets/11.jpg" data-sub-html="<p>I did a tour of a cave today and the view of the landscape below was breathtaking.</p>"><img src="assets/thumbs/11.jpg" alt="Cave" /></li
+          ><li data-src="assets/11.jpg" data-sub-html="<p>I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.</p>"><img src="assets/thumbs/12.jpg" alt="Bluebells" /></li
+        ></ul>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2016 photo<span>SEARCH</span></p>
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/site.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#gallery').lightGallery({
+          pager: true,
+          mode: 'lg-fade',
+          cssEasing : 'cubic-bezier(0.25, 0, 0.25, 1)'
+        });
+        //Search function
+        $("#search").keypress(function(){
+          var current_query = $(this).val();
+          $("#gallery li").hide();
+          $("#gallery li").each(function(){
+            var current_keyword = $(this).attr("data-sub-html")
+            if(current_keyword.indexOf(current_query) >= 0){
+              $(this).show();
+            }
+          }); 
+        });
+      });
+    </script> 
+  </body>
+</html>

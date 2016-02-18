@@ -1,0 +1,140 @@
+/*-----------------------------------------------
+  GLOBAL STYLES
+------------------------------------------------*/
+
+* { 
+  box-sizing: border-box;
+}
+  
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;  
+  color: #7f7f7f;
+  background: #fff;
+}
+h1,h2,h3,h4 {
+  font-family: 'Montserrat', sans-serif;  
+  color: #4a4a4a;
+}
+p {
+  font-size: 1.3em;
+}
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* Link Styles */
+
+a {
+  text-decoration: none;
+  color: #7f7f7f;
+}
+a:hover {
+  color: #84C441;
+}
+
+.wrapper {
+  width: 980px;
+  max-width: 75%;
+  margin:0 auto;
+}
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+.center {
+  text-align: center;
+}
+
+/*-----------------------------------------------
+  Header
+------------------------------------------------*/
+
+header {
+  text-align: center;
+  padding: 2% 0;
+  position: fixed;
+  background: rgba(255,255,255,.8);
+  width: 100%;
+  z-index: 20;
+}
+.title{
+  font-size:2rem;
+  padding: 2% 0;
+}
+.title span {
+  color: #EC4747;
+}
+#search {
+  font-size: 16pt;
+  border: 1px solid #d9d9d9;
+  outline: 0;
+  padding: 0 1%;
+  height: 40px;
+  color: #7f7f7f;
+  border-radius: .25em;
+  width: 460px;
+
+}
+#search:focus{
+  border: 1px solid #EC4747;
+}
+
+/*-----------------------------------------------
+  Gallery
+------------------------------------------------*/
+
+.wrapper-gallery {
+  padding-top: 12%;
+}
+
+li {
+  display: inline-block;
+  margin-bottom: 56px;
+  margin-right: 60px;
+
+}
+li img {
+  width: 200px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 1;
+
+}
+li img:hover{
+  -webkit-filter: grayscale(100%);
+  z-index: 2;
+}
+li:nth-child(4),li:nth-child(8),li:nth-child(12) {
+  margin-right: 0;
+}
+
+/*-----------------------------------------------
+  Footer
+------------------------------------------------*/
+
+footer {
+  padding: 2% 0;
+  text-align: center;
+}
+footer p {
+  font-size: .8em;
+}
+footer p span {
+  color: #EC4747;
+}
+
